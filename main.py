@@ -8,6 +8,8 @@ app = FastAPI()
 def home():
     return {"message": "Hello from Railway!"}
 
-if _name_ == "_main_":
-    port = int(os.environ["PORT"])
+if __name__ == "__main__":
+    port = int(os.environ["PORT"])  # استخدم PORT مباشرة بدون قيمة افتراضية
     uvicorn.run(app, host="0.0.0.0", port=port)
+
+
